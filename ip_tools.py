@@ -1,6 +1,5 @@
 #! /Users/Francisco/Documents/ATBSWP/ATBSWP_ve/bin/python
 import requests
-from pathlib import Path
 
 # Refactor to use relative paths instead of absolute ones.
 
