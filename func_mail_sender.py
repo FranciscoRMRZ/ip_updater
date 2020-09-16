@@ -13,8 +13,8 @@ logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s -  %(levelname)s -
 
 def send_mail(sent_to, body):
     # Credentials.
-    gmail_user = <email_user>
-    gmail_password = <password>
+    mail_user = <email_user>
+    mail_password = <password>
 
     # Mail formatting.
     sent_from = <sender>    
@@ -27,7 +27,7 @@ def send_mail(sent_to, body):
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.ehlo()
         server.starttls()
-        server.login(gmail_user, gmail_password)
+        server.login(mail_user, mail_password)
         # send the mails
         server.sendmail(sent_from, sent_to, email_text)
         logging.debug(f'sent_from: {sent_from}, sent_to: {sent_to}')

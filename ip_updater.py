@@ -11,7 +11,8 @@ if current_ip == registered_ip:
 else:
     ip_tools.update_registered_ip(current_ip)
     body = f'The ip has been updated to: {current_ip}'
+    # Mail module to send the address.
     send_mail(send_to, body)
-    #TODO: Add email module to send the address.
+    
 
 

@@ -1,5 +1,6 @@
 #! /Users/Francisco/Documents/ATBSWP/ATBSWP_ve/bin/python
 import requests
+from pathlib import Path
 
 # Refactor to use relative paths instead of absolute ones.
 
@@ -9,10 +10,10 @@ def get_public_ip():
     return public_ip
 
 def read_registered_ip():
-    with open('/Users/Francisco/Documents/ATBSWP/ip_updater/public_ip.txt') as ip:
+    with open('public_ip.txt') as ip:
         registered_ip = ip.read()
         return registered_ip
 
 def update_registered_ip(new_ip_address):
-    with open('/Users/Francisco/Documents/ATBSWP/ip_updater/public_ip.txt', 'w') as ip:
+    with open('public_ip.txt', 'w') as ip:
         ip.write(new_ip_address)
